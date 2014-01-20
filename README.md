@@ -30,19 +30,19 @@ Or install it yourself as:
 `Homecoming.find` searches for a given filename in the current and all parent
 directories.
 
-  # Given the following directory structure:
+    # Given the following directory structure:
 
-  /
-    home/
-      rrrene/
-        projects/
-          your_project/
-            .yourconfig
-        .yourconfig
+    /
+      home/
+        rrrene/
+          projects/
+            your_project/
+              .yourconfig
+          .yourconfig
 
-  Homecoming.find(".yourconfig", "/home/rrrene/projects/your_project")
-  # => ["/home/rrrene/.yourconfig",
-        "/home/rrrene/projects/your_project/.yourconfig"]
+    Homecoming.find(".yourconfig", "/home/rrrene/projects/your_project")
+    # => ["/home/rrrene/.yourconfig",
+          "/home/rrrene/projects/your_project/.yourconfig"]
 
 If no path is given as second parameter, the current directory is the
 starting point of the traversal.
@@ -52,9 +52,9 @@ starting point of the traversal.
 `Homecoming.each` traverses and yields the given and all parent
 directories.
 
-  Homecoming.each("/home/rrrene/projects/your_project") do |dir|
-    # ...
-  end
+    Homecoming.each("/home/rrrene/projects/your_project") do |dir|
+      # ...
+    end
 
 If no path is given, the current directory is the starting point of the
 traversal.
@@ -62,11 +62,11 @@ traversal.
 In our example, this would yield the following directories beginning with the
 given/current one:
 
-  "/home/rrrene/projects/your_project"
-  "/home/rrrene/projects"
-  "/home/rrrene"
-  "/home"
-  "/"
+    "/home/rrrene/projects/your_project"
+    "/home/rrrene/projects"
+    "/home/rrrene"
+    "/home"
+    "/"
 
 
 ## Contributing
