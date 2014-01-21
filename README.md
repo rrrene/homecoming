@@ -1,5 +1,7 @@
 # Homecoming
 
+[![Build Status](https://travis-ci.org/rrrene/homecoming.png?branch=master)](https://travis-ci.org/rrrene/homecoming)
+
 Homecoming let's you easily traverse all parent directories of a given or
 the current directory.
 
