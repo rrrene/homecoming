@@ -28,6 +28,6 @@ module Homecoming
   end
 
   def self.each(path = Dir.pwd, &block)
-    Homecoming::Traversal.new(path, &block)
+    Homecoming::Traversal.new(path).each(&block)
   end
 end

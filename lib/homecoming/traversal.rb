@@ -1,11 +1,10 @@
+require 'pathname'
+
 module Homecoming
-  class Traversal
+  class Traversal < Enumerator
     def initialize(dir = Dir.pwd, &block)
-      old_length = nil
-      while dir != '.' && dir.length != old_length
-        yield dir
-        old_length = dir.length
-        dir = File.dirname(dir)
+      super() do |y|
+        Pathname(dir).ascend { |p| y.yield p.to_s }
       end
     end
   end
